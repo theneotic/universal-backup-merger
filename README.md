@@ -1,5 +1,24 @@
 # Universal Music-App Backup Merger
 
+> **A best-effort importer for compatible music-app backup exports, including archive inspection and SQLite-backed migration support.**
+
+| Project lens | Details |
+| --- | --- |
+| **Type** | Local data utility |
+| **Stack** | Python |
+| **Status** | Actively maintained |
+
+## Overview
+
+A best-effort importer for compatible music-app backup exports, including archive inspection and SQLite-backed migration support. This README keeps the project’s verified setup, usage, privacy, and implementation notes together in one place.
+
+## Repository Snapshot
+
+The top-level workspace currently includes `README.md`, `universal_backup_merger.py`. Review the project-specific sections below before installing dependencies, supplying configuration values, or running a build.
+
+
+---
+
 `universal_backup_merger.py` is a best-effort importer for different music-app backup exports. It accepts `.backup` and `.zip` files, finds an SQLite database inside each archive, identifies the Metrolist backup by its filename or schema, and treats the remaining archives as source backups.
 
 > This script works with **backup/export files**, not raw Android installer files ending in `.apk`. A raw installer APK contains application code, not the user’s SQLite library data. The app must first export its data as a `.backup`, `.zip`, or another database backup.
